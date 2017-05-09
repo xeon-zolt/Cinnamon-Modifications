@@ -21,8 +21,31 @@ while True:
     elif pannel == '4':
         break
 
-f.close()        
-cmd = 'dconf load /org/cinnamon/ < settings'
+        
 
-import os
-os.system(cmd)
+while True:
+    f.write('[sounds]')
+    
+'''
+logout-enabled=true
+map-enabled=true
+maximize-enabled=true
+login-enabled=true
+switch-enabled=true
+notification-enabled=true
+tile-enabled=true
+minimize-enabled=true
+unplug-enabled=true
+close-enabled=true
+plug-enabled=true
+unmaximize-enabled=true
+   
+'''
+
+f.close()
+run_dconf():
+    cmd = 'dconf load /org/cinnamon/ < settings'
+    import os
+    os.system(cmd)
+
+run_dconf()
